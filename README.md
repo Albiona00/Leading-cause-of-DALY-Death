@@ -8,28 +8,26 @@ This project focuses on analyzing and understanding the leading causes of Disabi
 Dataset Description
 The dataset includes the following columns:
 
-COUNTRY_CODE: Country code
-COUNTRY: Country name
-GHE_CAUSE_CODE: Cause code
-GHE_CAUSE_TYPE: Cause type
-GHE_CAUSE_TITLE: Cause title
-YEAR: Year
-SEX_CODE: Gender code
-AGEGROUP_CODE: Age group code
-POPULATION: Population
-DEATHS: Number of deaths
-DEATHS_RATE: Death rate
-DEATHS_100K: Deaths per 100,000 population
-DALY: Disability-Adjusted Life Year
-DALY_RATE: DALY rate
-DALY_100K: DALY per 100,000 population
+- COUNTRY_CODE: Country code
+- COUNTRY: Country name
+- GHE_CAUSE_CODE: Cause code
+- GHE_CAUSE_TYPE: Cause type
+- GHE_CAUSE_TITLE: Cause title
+- YEAR: Year
+- SEX_CODE: Gender code
+- AGEGROUP_CODE: Age group code
+- POPULATION: Population
+- DEATHS: Number of deaths
+- DEATHS_RATE: Death rate
+- DEATHS_100K: Deaths per 100,000 population
+- DALY: Disability-Adjusted Life Year
+- DALY_RATE: DALY rate
+- DALY_100K: DALY per 100,000 population
 
 
 Usage
 
-Prerequisites
-
-Make sure you have the required Python libraries installed. You can install them using:
+Prerequisites: Make sure you have the required Python libraries installed. You can install them using:
 pip install -r requirements.txt
 
 Running the Code
@@ -81,9 +79,6 @@ The project includes additional code for binarization, subset selection, discret
 Contributors
 
 Rina Shabani and Albiona Vukaj
-
-License
-MIT License
 
 Copyright
 The data used in this analysis is sourced from World Health Organization (WHO).
