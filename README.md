@@ -1,38 +1,84 @@
 # Leading-cause-of-DALY-Death
+
 Overview
-This project focuses on the analysis of the leading causes of Disability-Adjusted Life Years (DALY) and death. DALY is a comprehensive metric that combines years of life lost due to premature death and years lived with disability, providing a holistic view of the health burden associated with various conditions.
 
-Purpose
-The purpose of this project is to explore and understand the major factors contributing to the global burden of disease. By identifying the leading causes of DALY and death, we aim to shed light on critical health issues, inform public health policies, and guide resource allocation for disease prevention and healthcare improvement.
+This project focuses on analyzing and understanding the leading causes of Disability-Adjusted Life Year (DALY) and death in different countries. The dataset contains information about various factors, including country details, causes, years, demographics, population, deaths, and DALY rates. The main objective of the analysis and processing of these data is to identify and understand the key factors that cause DALY (Disability-Adjusted Life Year) and death in different countries, over different years, and in various demographic groups, as well as to predict possible future occurrences of DALY and death. With this information, our aim is to identify the key factors to develop innovative solutions to mitigate or prevent their impact, while also raising public awareness of healthcare.
 
-Data Sources
-The analysis is based on data collected from reputable health organizations, such as the World Health Organization (WHO) and other relevant sources. The dataset includes information on the prevalence, mortality rates, and DALY for various diseases and conditions.
 
-Key Features
-Data Exploration: Utilize descriptive statistics and visualizations to explore the distribution of DALY and death across different causes.
+Dataset Description
+The dataset includes the following columns:
 
-Trend Analysis: Investigate temporal trends to identify patterns and changes in the leading causes of DALY and death over time.
+- COUNTRY_CODE: Country code
+- COUNTRY: Country name
+- GHE_CAUSE_CODE: Cause code
+- GHE_CAUSE_TYPE: Cause type
+- GHE_CAUSE_TITLE: Cause title
+- YEAR: Year
+- SEX_CODE: Gender code
+- AGEGROUP_CODE: Age group code
+- POPULATION: Population
+- DEATHS: Number of deaths
+- DEATHS_RATE: Death rate
+- DEATHS_100K: Deaths per 100,000 population
+- DALY: Disability-Adjusted Life Year
+- DALY_RATE: DALY rate
+- DALY_100K: DALY per 100,000 population
 
-Regional Variations: Analyze variations in health burdens among different regions, providing insights into geographical disparities.
-
-Risk Factors: Explore associated risk factors contributing to the leading causes of DALY and death, offering a more nuanced understanding of the determinants of health.
 
 Usage
-Prerequisites
-Python 3.x
-Jupyter Notebook or any preferred Python environment
-Required Python libraries (NumPy, Pandas, Matplotlib, Seaborn, etc.)
+
+Prerequisites: Make sure you have the required Python libraries installed. You can install them using:
+pip install -r requirements.txt
+
+Running the Code
+
+Execute the Jupyter Notebook main.ipynb to view the analysis and visualization results.
 
 Clone the repository to your local machine:
-git clone https://github.com/your-username/Leading-Causes-of-DALY-Death.git
+
+git clone https://github.com/Albiona00/Leading-cause-of-DALY-Death 
 
 Navigate to the project directory:
+
 cd Leading-Causes-of-DALY-Death
 
 Install the necessary Python libraries:
+
 pip install -r requirements.txt
 
-Open and run the Jupyter Notebook (analysis.ipynb) to perform the analysis and visualize the results.
+Data Processing
+
+Outliers - Data Quality (Normalization)
+
+The project includes code for detecting and handling outliers using Z-scores. Outliers are visualized using box plots, and missing values, unique values, and duplicates are also analyzed.
+
+Aggregation
+
+The dataset is aggregated based on primary causes and countries to provide a summarized view of deaths and DALY.
+
+Reduction of Dimensions
+
+Columns related to rates are removed to reduce dimensionality.
+
+Quality of Data
+
+Column names are renamed for better clarity and understanding.
+
+Visualization
+
+Visualizations include box plots for potential outliers and bar plots for the top causes of death.
+
+Execution of Changes
+
+The dataset is saved after changes.
+
+Additional Sections
+
+The project includes additional code for binarization, subset selection, discretization, creation of attributes, and conversion of data types.
+
+Contributors
+
+Rina Shabani and Albiona Vukaj
 
 Copyright
 The data used in this analysis is sourced from World Health Organization (WHO).
