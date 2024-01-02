@@ -1,85 +1,90 @@
-# Leading-cause-of-DALY-Death
+Leading cause of disability-adjusted life year (DALY) & Death
 
-Overview
+Përmbledhje
+Ky projekt synon të identifikojë dhe kuptojë faktorët kyç që kontribuojnë në Vitin e Jetës së Përshtatur me Aftësi (DALY) dhe vdekje në 25 ekonomitë kryesore. Duke përdorur të dhënat gjithëpërfshirëse të Organizatës Botërore të Shëndetësisë (WHO), ne eksplorojmë grupe të ndryshme demografike, vende dhe vite për të parashikuar mundësitë e ardhshme të DALY dhe vdekjeve. Qëllimi ynë është të identifikojmë faktorët kritikë për të zhvilluar zgjidhje inovative për të zvogëluar ose parandaluar ndikimin e tyre, ndërsa gjithashtu rritim ndërgjegjësimin publik për çështjet e kujdesit shëndetësor.
 
-This project focuses on analyzing and understanding the leading causes of Disability-Adjusted Life Year (DALY) and death in different countries. The dataset contains information about various factors, including country details, causes, years, demographics, population, deaths, and DALY rates. The main objective of the analysis and processing of these data is to identify and understand the key factors that cause DALY (Disability-Adjusted Life Year) and death in different countries, over different years, and in various demographic groups, as well as to predict possible future occurrences of DALY and death. With this information, our aim is to identify the key factors to develop innovative solutions to mitigate or prevent their impact, while also raising public awareness of healthcare.
+Të Dhënat
+Të dhënat e përdorura në këtë projekt vijnë nga dataseti Top 25 Ekonomitë Shkak i Parësor i DALYs & Vdekjeve të ofruara nga Organizata Botërore e Shëndetësisë (WHO) 2021. Përfshin statistika të detajuara mbi DALY dhe shkaqet e vdekjes në grupe të ndryshme demografike, vende dhe vite.
 
+Libraritë e Përdorura
 
-Dataset Description
-The dataset includes the following columns:
+NumPy (np):
+NumPy është një librari themelore për llogaritje shkencore në Python. Ajo ofron mbështetje për array të mëdha,
+multidimensionale dhe një koleksion të gjerë të funksioneve matematikore për të punuar me këto array.
 
-- COUNTRY_CODE: Country code
-- COUNTRY: Country name
-- GHE_CAUSE_CODE: Cause code
-- GHE_CAUSE_TYPE: Cause type
-- GHE_CAUSE_TITLE: Cause title
-- YEAR: Year
-- SEX_CODE: Gender code
-- AGEGROUP_CODE: Age group code
-- POPULATION: Population
-- DEATHS: Number of deaths
-- DEATHS_RATE: Death rate
-- DEATHS_100K: Deaths per 100,000 population
-- DALY: Disability-Adjusted Life Year
-- DALY_RATE: DALY rate
-- DALY_100K: DALY per 100,000 population
+Scikit-learn (StandardScaler, LabelEncoder):
+Scikit-learn është një librari e fuqishme dhe fleksibël në Python për mësimin e makinës.
+LabelEncoder: Përdoret për të koduar etiketat e kategorive në vlera numerike, 
+e cila është një parakusht i zakonshëm në procesin e mësimit të makinës për të përpunuar të dhëna kategorike.
 
+SciPy (stats):
+SciPy është një librari që përdoret për llogaritje shkencore dhe matematike. Ajo ofron module të ndryshme për optimizim,
+algjebra lineare, integrime etj.
+Stats: Nënmoduli stats ofron një numër të madh të funksioneve dhe shpërndarjeve statistikore të përdorura për të kryer analiza statistikore dhe teste të ndryshme.
 
-Usage
+Seaborn (sns):
+Seaborn është një librari për vizualizimin e të dhënave statistikore në Python. Ajo ndërton mbi Matplotlib 
+dhe ofron një ndërfaqe të nivelit të lartë për të krijuar grafika tërheqëse dhe informative statistikore.
 
-Prerequisites: Make sure you have the required Python libraries installed. You can install them using:
-pip install -r requirements.txt
+Matplotlib (plt):
+Përshkrim: Matplotlib është libraria më e njohur për vizualizimin e të dhënave në Python.
+Ajo ofron kontroll të plotë mbi elementet e grafikës dhe është shumë fleksibël.
 
-Running the Code
+Kolonat që përmbanë dataset-i:
 
-Execute the Jupyter Notebook main.ipynb to view the analysis and visualization results.
+COUNTRY_CODE: Country code
+COUNTRY: Country name
+GHE_CAUSE_CODE: Cause code
+GHE_CAUSE_TYPE: Cause type
+GHE_CAUSE_TITLE: Cause title
+YEAR: Year
+SEX_CODE: Gender code
+AGEGROUP_CODE: Age group code
+POPULATION: Population
+DEATHS: Number of deaths
+DEATHS_RATE: Death rate
+DEATHS_100K: Deaths per 100,000 population
+DALY: Disability-Adjusted Life Year
+DALY_RATE: DALY rate
+DALY_100K: DALY per 100,000 population
+Të Drejtat e Autorit:
 
-Clone the repository to your local machine:
+© Të drejtat e autorit Organizata Botërore e Shëndetësisë (WHO), 2021. Të gjitha të drejtat e rezervuara.
 
-git clone https://github.com/Albiona00/Leading-cause-of-DALY-Death 
+Objektivi
+Identifikimi i Faktorëve Kyç: Për të përcaktuar kontribuesit kryesorë në DALY dhe vdekje në mbarë botën.
+Parashikimi i Ndodhive të Ardhshme: Për të përdorur të dhënat historike për të parashikuar tendencat e ardhshme në DALY dhe vdekje.
+Zbutja e Ndikimit: Për të sugjeruar strategji të veprueshme për përmirësimet në kujdesin shëndetësor dhe politikat e shëndetit publik.
+Rritja e Ndjegjësimit: Për të rritur njohuritë dhe vëmendjen publike ndaj çështjeve të rëndësishme të shëndetit.
 
-Navigate to the project directory:
+Përmbajtja e Repozitorit
+WHOData.csv: Skedari i të dhënave që përmban informacionin mbi DALY dhe vdekjet.
+main.ipynb: Shënime Jupyter me të gjithë kodin e përpunimit të të dhënave, analizës, zbulimit të anomalive, dhe vizualizimeve.
 
-cd Leading-Causes-of-DALY-Death
+Metodologjia
+- Leximi i të Dhënave: Lexon datasetin përmes Pandas.
+- Përpunimi: Përfshin kontrollin për vlera që mungojnë, riemërimin e kolonave dhe integrimin e të dhënave.
+- Pastrimi i të Dhënave: Standardizon vlerat e kolonave, heq regjistrimet e dyfishta dhe menaxhon outliers.
+- Binarizimi: Binarizon një kolonë bazuar në vlerën mesatare të saj.
+- Zgjedhja e Nënëngrupeve: Verifikon unicitetin e asocimeve midis kolonave të caktuara.
+- Paraqitja e të Dhënave: Krahasimi i dataseteve fillestare dhe të përpunuara.
+- Zbulimi dhe Pastrimi i Outliers: Vizualizon dhe pastron të dhënat nga outliers.
+- Zbulimi i Anomalive: Kontrollon dhe heq anomali në kolona të ndryshme.
+- Parandalimi i Zbulimeve të Pasakta: Kryen analiza për të shmangur interpretimet e gabuara.
+- Analiza Eksploruese e të Dhënave: Ofron statistika përshkruese dhe vizualizime.
 
-Install the necessary Python libraries:
+Rezultatet & Diskutimi
+Përmbledhja e gjetjeve kryesore, performancës së modelit dhe çdo njohurie të fituar nga projekti.
+Diskutimi i strategjive potenciale për zbutjen e DALY dhe vdekjeve bazuar në analizë.
+Sugjerimi i fushave për hulumtime të mëtejshme ose mbledhje të të dhënave.
 
-pip install -r requirements.txt
+Si të Përdorni
+Vendosja e Mjedisit: Sigurohuni që të gjitha bibliotekat dhe varësitë e nevojshme janë të instaluar.
+Ekzekutimi i Shënimeve: Ekzekutoni main.ipynb për të kryer hapat e përpunimit të të dhënave, analizës dhe vizualizimit.
+Eksplorimi i Të Dhënave: Eksploroni WHOData.csv për njohuri shtesë dhe kuptim më të thellë.
 
-Data Processing
+Kërkesat
+Lista e librave dhe varësive të nevojshme për të ekzekutuar projektin, p.sh., pandas, numpy, scikit-learn, etj.
 
-Outliers - Data Quality (Normalization)
-
-The project includes code for detecting and handling outliers using Z-scores. Outliers are visualized using box plots, and missing values, unique values, and duplicates are also analyzed.
-
-Aggregation
-
-The dataset is aggregated based on primary causes and countries to provide a summarized view of deaths and DALY.
-
-Reduction of Dimensions
-
-Columns related to rates are removed to reduce dimensionality.
-
-Quality of Data
-
-Column names are renamed for better clarity and understanding.
-
-Visualization
-
-Visualizations include box plots for potential outliers and bar plots for the top causes of death.
-
-Execution of Changes
-
-The dataset is saved after changes.
-
-Additional Sections
-
-The project includes additional code for binarization, subset selection, discretization, creation of attributes, and conversion of data types.
-
-Contributors
-
-Rina Shabani and Albiona Vukaj
-
-Copyright
-The data used in this analysis is sourced from World Health Organization (WHO).
-Special thanks to the open-source community for providing valuable tools and resources used in this project.
+Autorët
+Rina Shabani dhe Albiona Vukaj
