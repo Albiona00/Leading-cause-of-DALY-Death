@@ -76,6 +76,11 @@ Stats: Nënmoduli stats ofron një numër të madh të funksioneve dhe shpërnda
 Seaborn është një librari për vizualizimin e të dhënave statistikore në Python. Ajo ndërton mbi Matplotlib 
 dhe ofron një ndërfaqe të nivelit të lartë për të krijuar grafika tërheqëse dhe informative statistikore.
 
+* Matplotlib (plt):
+Përshkrim: Matplotlib është libraria më e njohur për vizualizimin e të dhënave në Python.
+Ajo ofron kontroll të plotë mbi elementet e grafikës dhe është shumë fleksibël.
+
+
 # Vizualizimi i te dhenave:
 
 ## SMOTE Algoritmi
@@ -92,12 +97,6 @@ dhe ofron një ndërfaqe të nivelit të lartë për të krijuar grafika tërheq
 ![Screenshot 2024-01-07 234241](https://github.com/Albiona00/Leading-cause-of-DALY-Death/assets/74986994/7716e66e-c794-43b0-8a72-bf7e37aea6a4)
 
 
-
-
-
-* Matplotlib (plt):
-Përshkrim: Matplotlib është libraria më e njohur për vizualizimin e të dhënave në Python.
-Ajo ofron kontroll të plotë mbi elementet e grafikës dhe është shumë fleksibël. 
 
 ## Autorët
 Rina Shabani dhe Albiona Vukaj
